@@ -98,7 +98,7 @@ export type ProxifiedBinaryExpression = ProxyBase & {
 export type ProxifiedAwaitExpression = ProxyBase & {
   $type: "await-expression";
   $argument: Proxified;
-}
+};
 
 export type ProxifiedBlockStatement = ProxyBase & {
   $type: "blockStatement";

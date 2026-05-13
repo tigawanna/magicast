@@ -5,18 +5,18 @@ import { proxify } from "./proxify";
 import { createProxy } from "./_utils";
 
 export function proxifyAwaitExpression(
-   node: AwaitExpression,
-   mod?: ProxifiedModule,
- ): ProxifiedAwaitExpression {
-   if (node.type !== "AwaitExpression") {
-     throw new MagicastError("Not an await expression");
-   }
-   return createProxy(
-     node,
-     {
-       $type: "await-expression",
-       $argument: proxify(node.argument, mod),
-     },
-     {},
-   ) as ProxifiedAwaitExpression;
- }
+  node: AwaitExpression,
+  mod?: ProxifiedModule,
+): ProxifiedAwaitExpression {
+  if (node.type !== "AwaitExpression") {
+    throw new MagicastError("Not an await expression");
+  }
+  return createProxy(
+    node,
+    {
+      $type: "await-expression",
+      $argument: proxify(node.argument, mod),
+    },
+    {},
+  ) as ProxifiedAwaitExpression;
+}

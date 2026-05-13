@@ -1,2 +1,4 @@
 packages:
   - "!vendor/*"
+shellEmulator: true
+ignoreWorkspaceRootCheck: true

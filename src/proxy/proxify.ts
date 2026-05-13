@@ -82,7 +82,7 @@ export function proxify<T>(node: ASTNode, mod?: ProxifiedModule): Proxified<T> {
       proxy = proxifyBinaryExpression(node, mod);
       break;
     }
-    case "AwaitExpression":{
+    case "AwaitExpression": {
       proxy = proxifyAwaitExpression(node, mod);
       break;
     }
